@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Usage: ./scripts/publish-checklist.sh <draft-file>
+# Shows a pre-publish checklist for a content piece.
+
+DRAFT="${1:?Usage: publish-checklist.sh <draft-file>}"
+
+echo "========================================="
+echo "  PRE-PUBLISH CHECKLIST"
+echo "  File: $(basename "$DRAFT")"
+echo "========================================="
+echo ""
+echo "CONTENT QUALITY"
+echo "  [ ] Title is specific and curiosity-driven (not generic)"
+echo "  [ ] Hook is in the first 2 sentences"
+echo "  [ ] Includes at least 1 screenshot or data table"
+echo "  [ ] Has a clear CTA (try it, star it, follow)"
+echo "  [ ] Proofread for typos"
+echo ""
+echo "PLATFORM VERSIONS"
+echo "  [ ] Substack — full article ready"
+echo "  [ ] DEV.to — same article, canonical URL set to Substack"
+echo "  [ ] X/Twitter — thread version (5-8 tweets, under 280 chars each)"
+echo "  [ ] LinkedIn — professional version (300-500 words)"
+echo ""
+echo "ASSETS"
+echo "  [ ] Screenshots are high-res and cropped"
+echo "  [ ] Alt text on all images"
+echo "  [ ] Links are correct and not broken"
+echo "  [ ] GitHub repo is public and README is up to date"
+echo ""
+echo "TIMING"
+echo "  [ ] Post between 8-10 AM UTC (peak dev engagement)"
+echo "  [ ] Not posting on Friday evening or weekend"
+echo "  [ ] Calendar updated with publish date"
+echo ""
+echo "POST-PUBLISH"
+echo "  [ ] Reply to early comments (first 2 hours matter most)"
+echo "  [ ] Cross-post links between platforms"
+echo "  [ ] Share in relevant communities (Reddit, Discord, Slack)"
+echo "  [ ] Move draft to content/published/"
+echo "  [ ] Update project STATUS.md"
