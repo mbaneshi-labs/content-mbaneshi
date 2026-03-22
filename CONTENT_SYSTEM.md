@@ -61,3 +61,16 @@ Each piece of content gets adapted:
 - `scripts/draft.sh` — Generate a draft from a template + project data
 - `scripts/status.sh` — Show content pipeline status
 - `scripts/publish-checklist.sh` — Pre-publish checklist per platform
+
+## ContentForge (The Product)
+
+This repo documents the content workflow. **ContentForge** (`/Users/bm/contentforge/`) is the Rust binary that automates it.
+
+| This repo (content-mbaneshi) | ContentForge (contentforge/) |
+|---|---|
+| Brand, templates, calendar | CLI, TUI, API, MCP server |
+| Manual workflow docs | Automated pipeline engine |
+| Project STATUS.md files | SQLite + 6 platform adapters |
+| Shell scripts (draft.sh) | `contentforge draft/adapt/publish` |
+
+See `projects/contentforge/STATUS.md` for current build status.
